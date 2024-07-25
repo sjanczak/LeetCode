@@ -48,6 +48,8 @@ class Solution:
     matches the current iten. Remove duplciates by maintaining a write position.
     Overwrite the write postion with the current ieterated item int he list if it
     isn't a duplicate. 
+
+    Big O = O(n)
     """
     def removeDuplicates(self, nums: List[int]) -> int:     
         numsLenth = len(nums)
