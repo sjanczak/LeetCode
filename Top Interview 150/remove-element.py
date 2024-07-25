@@ -49,8 +49,9 @@ Constraints:
 class Solution:
     """ 
     Approach should be to forward traverse the list removing any found val by moving the
-    next element into the matched position. This should give a Big O of log(n) where n is
-    the length of nums.
+    next element into the matched position. 
+
+    Big O = O(n)
     """
     def removeElement(self, nums: List[int], val: int) -> int:
         numsLenth = len(nums)
