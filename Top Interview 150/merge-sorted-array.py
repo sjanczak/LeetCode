@@ -40,6 +40,13 @@ nums2.length == n
 Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 """
 class Solution:
+    """
+    Reverse iterate the list looking at the next item in each list checking which 
+    is the largest value and placing that in the nums1 next position. We need to 
+    handle the 
+
+    Big O = O(m+m)
+    """
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
@@ -58,6 +65,7 @@ class Solution:
         # reverse order sort - loop through the main 
         while outputArrayPosition > -1:
             if nums1Position == -1 or nums2Position == -1:
+                # handle case when we have less in one list.
                 if nums1Position != -1:
                     nums1[outputArrayPosition] = nums1[nums1Position]
                     nums1Position -= 1
